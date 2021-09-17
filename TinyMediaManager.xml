@@ -17,7 +17,7 @@
   <Support>http://lime-technology.com/forum/index.php?topic=45838.0</Support>
   <Registry>https://hub.docker.com/r/romancin/tinymediamanager</Registry>
   <GitHub>https://github.com/romancin/tinymediamanager-docker</GitHub>
-  <Repository>romancin/tinymediamanager:latest</Repository>
+  <Repository>fengdingwen/tmmv4:latest</Repository>
   <Project>https://www.tinymediamanager.org/</Project>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
