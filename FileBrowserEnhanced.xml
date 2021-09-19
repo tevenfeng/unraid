@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container>
-  <TemplateURL>https://raw.githubusercontent.com/shuosiw/unraid/master/FileBrowserEnhanced.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/tevenfeng/unraid/master/FileBrowserEnhanced.xml</TemplateURL>
   <Beta>False</Beta>
   <Category>Cloud: Network:Web Tools:</Category>
   <Name>FileBrowserEnhanced</Name>
@@ -19,7 +19,6 @@
   <Overview>
     FileBrowser 针对一个特定目录提供了文件管理界面，支持文件的上传、删除、预览、重命名和编辑，同时支持了多用户操作。FileBrowserEnhanced 是荒野無燈大佬对 FileBrowser 二次开发的增强版，简称 FBE。FBE 在原来 FileBrowser 的基础上增加了更多的实用功能，比如在网页上右键获取文件的 MediaInfo、制作种子、生成缩略图、解压等等
   </Overview>
-  <Support>http://lime-technology.com/forum/index.php?topic=45838.0</Support>
   <Registry>https://registry.hub.docker.com/r/80x86/filebrowser/</Registry>
   <GitHub>https://github.com/ttys3/filebrowser</GitHub>
   <Repository>80x86/filebrowser:amd64</Repository>

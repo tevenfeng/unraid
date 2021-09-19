@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container>
-  <TemplateURL>https://raw.githubusercontent.com/shuosiw/unraid/master/TinyMediaManager.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/tevenfeng/unraid/master/TinyMediaManager.xml</TemplateURL>
   <Beta>False</Beta>
   <Category>Cloud: Network:Web Tools:</Category>
   <Name>TinyMediaManager</Name>
@@ -14,7 +14,6 @@
   <Overview>
     tinyMediaManager，简称 tmm，是一款基于 Java 开发的影视资源信息管理工具，可以用来批量处理本地的影视资源，处理后就可以非常漂亮用海报墙的方式展示出来。
   </Overview>
-  <Support>http://lime-technology.com/forum/index.php?topic=45838.0</Support>
   <Registry>https://hub.docker.com/r/romancin/tinymediamanager</Registry>
   <GitHub>https://github.com/romancin/tinymediamanager-docker</GitHub>
   <Repository>fengdingwen/tmmv4:latest</Repository>

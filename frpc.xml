@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container>
-  <TemplateURL>https://raw.githubusercontent.com/shuosiw/unraid/master/frpc.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/tevenfeng/unraid/master/frpc.xml</TemplateURL>
   <Beta>False</Beta>
   <Category>Cloud: Network:Web Tools:</Category>
   <Name>frpc</Name>
@@ -15,7 +15,6 @@
   <Overview>
     frp 是一个专注于内网穿透的高性能的反向代理应用，frpc 作为部署在内网的客户端，用于连接外网 frps 服务端。
   </Overview>
-  <Support>http://lime-technology.com/forum/index.php?topic=45838.0</Support>
   <Registry>https://hub.docker.com/r/snowdreamtech/frpc</Registry>
   <GitHub>https://github.com/snowdreamtech/frp</GitHub>
   <Repository>snowdreamtech/frpc:latest</Repository>
