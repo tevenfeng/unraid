@@ -37,7 +37,7 @@
     Mode="rw" Description="该目录将映射到容器中的 /etc/frp，用于持久化存储 frpc 配置" Type="Path" 
     Display="always" Required="false" Mask="false">/mnt/user/appdata/frp</Config>
   <WebUI>http://[IP]:[PORT:7400]/</WebUI>
-  <Icon>https://github.com/shuosiw/unraid/raw/master/images/frpc-icon.png</Icon>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/frpc-icon.png</Icon>
   <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
   <PostArgs></PostArgs>
   <CPUset></CPUset>

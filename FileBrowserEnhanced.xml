@@ -50,7 +50,7 @@
     Mode="rw" Description="该目录将映射到容器中的 /config，用于持久化存储 FBE 配置" Type="Path" 
     Display="always" Required="false" Mask="false">/mnt/user/appdata/FileBrowserEnhanced</Config>
   <WebUI>http://[IP]:[PORT:8082]/</WebUI>
-  <Icon>https://github.com/shuosiw/unraid/raw/master/images/fbe-icon.png</Icon>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/fbe-icon.png</Icon>
   <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
   <PostArgs></PostArgs>
   <CPUset></CPUset>

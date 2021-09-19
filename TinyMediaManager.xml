@@ -45,7 +45,7 @@
     Mode="rw" Description="该目录将映射到容器中的 /media，用于进行资源刮削" Type="Path" 
     Display="always" Required="true" Mask="false"></Config>
   <WebUI>http://[IP]:[PORT:5800]/</WebUI>
-  <Icon>https://github.com/shuosiw/unraid/raw/master/images/tmm-icon.png</Icon>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/tmm-icon.png</Icon>
   <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
   <PostArgs></PostArgs>
   <CPUset></CPUset>
