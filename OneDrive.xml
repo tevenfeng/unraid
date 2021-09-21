@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/tevenfeng/unraid/master/OneDrive.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Cloud: Network:Web Tools:</Category>
+  <Name>OneDrive</Name>
+  <Description>
+    [b][u][span style='color: #E80000;']OneDrive Client for Linux[/span][/u][/b][br]
+    A free Microsoft OneDrive Client which supports OneDrive Personal, OneDrive for Business, OneDrive for Office365 and SharePoint.    [b][u][span style='color: #E80000;']配置说明[/span][/u][/b][br]
+    [b]/onedrive/conf[/b]: Configuration directory[br]
+    [b]/onedrive/data[/b]: Data directory[br][br]
+  </Description>
+  <Overview>
+    FileBrowser 针对一个特定目录提供了文件管理界面，支持文件的上传、删除、预览、重命名和编辑，同时支持了多用户操作。OneDrive 是荒野無燈大佬对 FileBrowser 二次开发的增强版，简称 OneDrive。OneDrive 在原来 FileBrowser 的基础上增加了更多的实用功能，比如在网页上右键获取文件的 MediaInfo、制作种子、生成缩略图、解压等等
+  </Overview>
+  <Registry>https://hub.docker.com/r/driveone/onedrive</Registry>
+  <GitHub>https://github.com/abraunegg/onedrive</GitHub>
+  <Repository>driveone/onedrive:stretch</Repository>
+  <Project>https://github.com/abraunegg/onedrive</Project>
+  <Privileged>false</Privileged>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Config Name="用户 ID" Target="PUID" Default="" 
+    Mode="" Description="运行 OneDrive 容器的用户" Type="Variable" 
+    Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="用户组 ID" Target="GUID" Default="" 
+    Mode="" Description="运行 OneDrive 容器的用户组" Type="Variable" 
+    Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="需要通过 OneDrive 管理的目录" Target="/onedrive/data" Default="" 
+    Mode="rw" Description="该目录将映射到容器中的 /onedrive/data" Type="Path" 
+    Display="always" Required="false" Mask="false">/mnt/user/appdata/onedrive/data</Config>
+  <Config Name="AppData 配置路径" Target="/onedrive/conf" Default="" 
+    Mode="rw" Description="该目录将映射到容器中的 /onedrive/config，用于持久化存储 OneDrive 配置" Type="Path" 
+    Display="always" Required="false" Mask="false">/mnt/user/appdata/onedrive/conf</Config>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/onedrive-icon.png</Icon>
+  <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DateInstalled></DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <DonateImg></DonateImg>
+</Container>
