@@ -11,8 +11,9 @@
     [b]/onedrive/data[/b]: Data directory[br][br]
   </Description>
   <Overview>
-    FileBrowser 针对一个特定目录提供了文件管理界面，支持文件的上传、删除、预览、重命名和编辑，同时支持了多用户操作。OneDrive 是荒野無燈大佬对 FileBrowser 二次开发的增强版，简称 OneDrive。OneDrive 在原来 FileBrowser 的基础上增加了更多的实用功能，比如在网页上右键获取文件的 MediaInfo、制作种子、生成缩略图、解压等等
-  </Overview>
+    This powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.[br]
+
+    This client is a 'fork' of the skilion client which was abandoned in 2018.  </Overview>
   <Registry>https://hub.docker.com/r/driveone/onedrive</Registry>
   <GitHub>https://github.com/abraunegg/onedrive</GitHub>
   <Repository>driveone/onedrive:stretch</Repository>
