@@ -9,6 +9,9 @@
     A free Microsoft OneDrive Client which supports OneDrive Personal, OneDrive for Business, OneDrive for Office365 and SharePoint.    [b][u][span style='color: #E80000;']配置说明[/span][/u][/b][br]
     [b]/onedrive/conf[/b]: Configuration directory[br]
     [b]/onedrive/data[/b]: Data directory[br][br]
+    [b]warning:[b]: You have to manually create the onedrive container using the following command under unRaid, since unRaid's docker manage plugin can not prompt to finish the authorizing process.[br]
+    docker run -it --name OneDrive --net host -e TZ="Asia/Shanghai" -e 'ONEDRIVE_UID'='99' -e 'ONEDRIVE_GID'='100' -v '/mnt/user/OneDrive/':'/onedrive/data' -v '/
+mnt/user/appdata/onedrive/conf':'/onedrive/conf' 'driveone/onedrive:stretch'
   </Description>
   <Overview>
     This powerful and highly configurable client can run on all major Linux distributions, FreeBSD, or as a Docker container. It supports one-way and two-way sync capabilities and securely connects to Microsoft OneDrive services.[br]
