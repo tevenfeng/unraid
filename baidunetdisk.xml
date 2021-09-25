@@ -6,36 +6,34 @@
   <Name>baidunetdisk</Name>
   <Description>
     [b][u][span style='color: #E80000;']应用介绍[/span][/u][/b][br]
-    百度网盘官方Linux版，可通过web界面或VNC连接。[br][br]
+    百度网盘官方Linux版，可通过VNC连接。[br][br]
     [b][u][span style='color: #E80000;']文档介绍[/span][/u][/b][br]
-    https://github.com/maxduke/docker-baidunetdisk-with-conf-dir[br][br]
+    https://github.com/john-shine/Docker-CodeWeavers_CrossOver-VNC/tree/master/BaiduNetdisk[br][br]
   </Description>
   <Overview>
     Docker image for baidunetdisk running with conf dir
   </Overview>
-  <Registry>https://hub.docker.com/r/johngong/baidunetdisk</Registry>
-  <Repository>johngong/baidunetdisk:latest</Repository>
+  <Registry>https://hub.docker.com/r/johnshine/baidunetdisk-crossover-vnc</Registry>
+  <Repository>johnshine/baidunetdisk-crossover-vnc:latest</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>host</Network>
   <Shell>sh</Shell>
+  <WebUI>http://[IP]:[PORT:6080]/vnc.html?autoconnect=true</WebUI>
   <Config Name="用户 ID" Target="PUID" Default="" 
     Mode="" Description="运行 baidunetdisk 容器的用户" Type="Variable" 
     Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="用户组 ID" Target="GUID" Default="" 
     Mode="" Description="运行 baidunetdisk 容器的用户组" Type="Variable" 
     Display="advanced" Required="true" Mask="false">100</Config>
-  <Config Name="web访问端口" Target="5800" Default="" 
-    Mode="tcp" Description="web访问端口"  Type="Port" 
-    Display="always" Required="true" Mask="false">5800</Config>
-  <Config Name="VNC访问端口" Target="5900" Default="" 
+  <Config Name="noVNC访问端口" Target="6080" Default="" 
+    Mode="tcp" Description="noVNC访问端口"  Type="Port" 
+    Display="always" Required="true" Mask="false">6080</Config>
+  <Config Name="VNC访问端口" Target="5901" Default="" 
     Mode="tcp" Description="VNC访问端口"  Type="Port" 
-    Display="always" Required="false" Mask="false">5900</Config>
-  <Config Name="AppData 配置路径" Target="/config" Default="" 
-    Mode="rw" Description="该目录将映射到容器中的 /config，用于持久化存储 baidunetdisk 配置" Type="Path" 
-    Display="always" Required="true" Mask="false">/mnt/user/appdata/baidunetdisk</Config>
-  <Config Name="baidunetdisk下载目录" Target="/config/baidunetdiskdownload" Default="" 
-    Mode="rw" Description="该目录将映射到容器中的 /config/baidunetdiskdownload" Type="Path" 
+    Display="always" Required="false" Mask="false">5901</Config>
+  <Config Name="baidunetdisk下载目录" Target="/home/baidu/baidunetdiskdownload/" Default="" 
+    Mode="rw" Description="该目录将映射到容器中的 /home/baidu/baidunetdiskdownload/" Type="Path" 
     Display="always" Required="true" Mask="false">/mnt/user</Config>
   <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/baidunetdisk-icon.png</Icon>
   <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
