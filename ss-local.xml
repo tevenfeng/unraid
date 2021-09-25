@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/tevenfeng/unraid/master/ss-local.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Cloud: Network:Web Tools:</Category>
+  <Name>ss-local</Name>
+  <Description>
+    [b][u][span style='color: #E80000;']应用介绍[/span][/u][/b][br]
+    Docker image for ss-local running with conf dir[br][br]
+    [b][u][span style='color: #E80000;']文档介绍[/span][/u][/b][br]
+    https://github.com/maxduke/docker-ss-local-with-conf-dir[br][br]
+  </Description>
+  <Overview>
+    Docker image for ss-local running with conf dir
+  </Overview>
+  <Registry>https://hub.docker.com/r/maxduke/ss-local-with-conf-dir</Registry>
+  <GitHub>https://github.com/maxduke/docker-ss-local-with-conf-dir</GitHub>
+  <Repository>maxduke/ss-local-with-conf-dir:latest</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Config Name="用户 ID" Target="PUID" Default="" 
+    Mode="" Description="运行 ss-local 容器的用户" Type="Variable" 
+    Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="用户组 ID" Target="GUID" Default="" 
+    Mode="" Description="运行 ss-local 容器的用户组" Type="Variable" 
+    Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="AppData 配置路径" Target="/etc/frp" Default="" 
+    Mode="rw" Description="该目录将映射到容器中的 /ss-local/conf，用于持久化存储 ss-local 配置" Type="Path" 
+    Display="always" Required="false" Mask="false">/mnt/user/appdata/ss-local</Config>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/ss-local-icon.png</Icon>
+  <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DateInstalled></DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <DonateImg></DonateImg>
+</Container>

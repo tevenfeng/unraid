@@ -9,6 +9,7 @@ UnRaid docker 模板库，目前支持的容器：
 |TinyMediaManager| 影视资源信息刮削工具| 简称 tmm|
 |ddnsgo| 动态ip映射工具| 动态公网 ipv4 可能需要|
 |OneDrive| OneDrive Linux 客户端| 开源第三方Linux OneDrive客户端，基于官方提供的Alpine镜像|
+|ss-local| Shadowsocks 客户端| Shadowsocks-libev 客户端 |
 
 
 #### 添加模板库
