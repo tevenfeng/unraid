@@ -25,6 +25,12 @@
   <Config Name="用户组 ID" Target="GUID" Default="" 
     Mode="" Description="运行 baidunetdisk 容器的用户组" Type="Variable" 
     Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="web访问端口" Target="5800" Default="" 
+    Mode="tcp" Description="web访问端口"  Type="Port" 
+    Display="always" Required="true" Mask="false">5800</Config>
+  <Config Name="VNC访问端口" Target="5900" Default="" 
+    Mode="tcp" Description="VNC访问端口"  Type="Port" 
+    Display="always" Required="false" Mask="false">5900</Config>
   <Config Name="AppData 配置路径" Target="/config" Default="" 
     Mode="rw" Description="该目录将映射到容器中的 /config，用于持久化存储 baidunetdisk 配置" Type="Path" 
     Display="always" Required="true" Mask="false">/mnt/user/appdata/baidunetdisk</Config>
