@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/tevenfeng/unraid/master/frpc.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Cloud: Network:Web Tools:</Category>
+  <Name>frpc</Name>
+  <Description>
+    [b][u][span style='color: #E80000;']应用介绍[/span][/u][/b][br]
+    This project provides a version of VS Code that runs a server on a remote machine and allows access through a modern web browser. It's based on the very same architecture used by Gitpod or GitHub Codespaces at scale.[br]
+    [b][u][span style='color: #E80000;']文档介绍[/span][/u][/b][br]
+    https://github.com/gitpod-io/openvscode-server[br][br]
+  </Description>
+  <Overview>
+    This project provides a version of VS Code that runs a server on a remote machine and allows access through a modern web browser. It's based on the very same architecture used by Gitpod or GitHub Codespaces at scale.
+  </Overview>
+  <Registry>hhttps://hub.docker.com/r/gitpod/openvscode-server</Registry>
+  <GitHub>https://github.com/gitpod-io/openvscode-server</GitHub>
+  <Repository>gitpod/openvscode-server:latest</Repository>
+  <Project>https://github.com/gitpod-io/openvscode-server</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <!-- <Config Name="用户 ID" Target="PUID" Default="" 
+    Mode="" Description="运行 openvscode 容器的用户" Type="Variable" 
+    Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="用户组 ID" Target="GUID" Default="" 
+    Mode="" Description="运行 openvscode 容器的用户组" Type="Variable" 
+    Display="advanced" Required="false" Mask="false">100</Config> -->
+  <Config Name="WebUI port" Target="3000" Default="" 
+    Mode="tcp" Description="VSCode Web UI Port"  Type="Port" 
+    Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="workspace" Target="/home/work" Default="" 
+    Mode="rw" Description="该目录将映射到容器中的 /home/workspace" Type="Path" 
+    Display="always" Required="false" Mask="false">/mnt/user/appdata/Coding</Config>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/openvscode-icon.png</Icon>
+  <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DateInstalled></DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <DonateImg></DonateImg>
+</Container>
