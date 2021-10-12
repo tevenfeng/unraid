@@ -13,7 +13,7 @@
   <Category/>
   <WebUI>http://[IP]:[PORT:5701]/</WebUI>
   <TemplateURL/>
-  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/qinglong.png</Icon>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/qinglong-icon.png</Icon>
   <ExtraParams>--hostname qinglong</ExtraParams>
   <PostArgs/>
   <CPUset/>
