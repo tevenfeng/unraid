@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>qinglong</Name>
+  <Repository>whyour/qinglong</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:5701]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/qinglong.png</Icon>
+  <ExtraParams>--hostname qinglong</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1632906251</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5701</HostPort>
+        <ContainerPort>5700</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/qinglong/log</HostDir>
+      <ContainerDir>/ql/log</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/qinglong/db</HostDir>
+      <ContainerDir>/ql/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/qinglong/config</HostDir>
+      <ContainerDir>/ql/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/qinglong/scripts</HostDir>
+      <ContainerDir>/ql/scripts</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>true</Value>
+      <Name>ENABLE_WEB_PANEL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>ENABLE_HANGUP</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels>
+    <Label>
+      <Value>Host(``)</Value>
+      <Name>traefik.http.routers.qinglong.rule</Name>
+      <Mode/>
+    </Label>
+    <Label>
+      <Value>5700</Value>
+      <Name>traefik.http.services.qinglong.loadbalancer.server.port</Name>
+      <Mode/>
+    </Label>
+    <Label>
+      <Value>true</Value>
+      <Name>traefik.enable</Name>
+      <Mode/>
+    </Label>
+  </Labels>
+  <Config Name="WEB Port" Target="5700" Default="" Mode="tcp" Description="Container Port: 5700" Type="Port" Display="always" Required="false" Mask="false">5701</Config>
+  <Config Name="Host Label 1" Target="traefik.http.routers.qinglong.rule" Default="" Mode="" Description="Container Label: traefik.http.routers.qinglong.rule" Type="Label" Display="always" Required="false" Mask="false">Host(``)</Config>
+  <Config Name="log" Target="/ql/log" Default="" Mode="rw" Description="Container Path: /ql/log" Type="Path" Display="advanced-hide" Required="false" Mask="false">/mnt/user/appdata/qinglong/log</Config>
+  <Config Name="db" Target="/ql/db" Default="" Mode="rw" Description="Container Path: /ql/db" Type="Path" Display="advanced-hide" Required="false" Mask="false">/mnt/user/appdata/qinglong/db</Config>
+  <Config Name="Host Key 2" Target="ENABLE_WEB_PANEL" Default="" Mode="" Description="Container Variable: ENABLE_WEB_PANEL" Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
+  <Config Name="config" Target="/ql/config" Default="" Mode="rw" Description="Container Path: /ql/config" Type="Path" Display="advanced-hide" Required="false" Mask="false">/mnt/user/appdata/qinglong/config</Config>
+  <Config Name="scripts" Target="/ql/scripts" Default="" Mode="rw" Description="Container Path: /ql/scripts" Type="Path" Display="advanced-hide" Required="false" Mask="false">/mnt/user/appdata/qinglong/scripts</Config>
+  <Config Name="ENABLE_HANGUP" Target="ENABLE_HANGUP" Default="" Mode="" Description="Container Variable: ENABLE_HANGUP" Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
+  <Config Name="Host Label 1" Target="traefik.http.services.qinglong.loadbalancer.server.port" Default="" Mode="" Description="Container Label: traefik.http.services.qinglong.loadbalancer.server.port" Type="Label" Display="advanced-hide" Required="false" Mask="false">5700</Config>
+  <Config Name="Host Label 1" Target="traefik.enable" Default="" Mode="" Description="Container Label: traefik.enable" Type="Label" Display="advanced-hide" Required="false" Mask="false">true</Config>
+</Container>
