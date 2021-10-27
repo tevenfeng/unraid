@@ -8,21 +8,24 @@
     [b][u][span style='color: #E80000;']应用介绍[/span][/u][/b][br]
     Docker image for ss-local running with conf dir[br][br]
     [b][u][span style='color: #E80000;']文档介绍[/span][/u][/b][br]
-    https://github.com/maxduke/docker-ss-local-with-conf-dir[br][br]
+    https://github.com/tevenfeng/docker-ss-local-with-conf-dir[br][br]
   </Description>
   <Overview>
     Docker image for ss-local running with conf dir
   </Overview>
-  <Registry>https://hub.docker.com/r/maxduke/ss-local-with-conf-dir</Registry>
-  <GitHub>https://github.com/maxduke/docker-ss-local-with-conf-dir</GitHub>
-  <Repository>maxduke/ss-local-with-conf-dir:latest</Repository>
+  <Registry>https://hub.docker.com/r/fengdignwen/ss-local-with-conf-dir</Registry>
+  <GitHub>https://github.com/tevenfeng/docker-ss-local-with-conf-dir</GitHub>
+  <Repository>fengdingwen/ss-local-with-conf-dir:latest</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>host</Network>
   <Shell>sh</Shell>
-  <Config Name="本地端口" Target="8080" Default="" 
-    Mode="tcp" Description="本地监听端口"  Type="Port" 
+  <Config Name="socks5端口" Target="8080" Default=""
+    Mode="tcp" Description="socks5本地监听端口"  Type="Port" 
     Display="always" Required="true" Mask="false">1080</Config>
+  <Config Name="http端口" Target="8118" Default=""
+    Mode="tcp" Description="privoxy转发http端口"  Type="Port" 
+    Display="always" Required="true" Mask="false">8118</Config>
   <Config Name="用户 ID" Target="PUID" Default="" 
     Mode="" Description="运行 ss-local 容器的用户" Type="Variable" 
     Display="advanced" Required="false" Mask="false">99</Config>
