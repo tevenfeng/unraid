@@ -13,9 +13,9 @@
   <Overview>
     Docker image for ss-local running with conf dir
   </Overview>
-  <Registry>https://hub.docker.com/r/fengdignwen/ss-local-with-conf-dir</Registry>
+  <Registry>https://hub.docker.com/r/fengdignwen/sslocal-privoxy-with-conf</Registry>
   <GitHub>https://github.com/tevenfeng/docker-ss-local-with-conf-dir</GitHub>
-  <Repository>fengdingwen/ss-local-with-conf-dir:latest</Repository>
+  <Repository>fengdingwen/sslocal-privoxy-with-conf:latest</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>host</Network>
