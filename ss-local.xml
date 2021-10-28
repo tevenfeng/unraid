@@ -32,9 +32,12 @@
   <Config Name="用户组 ID" Target="GUID" Default="" 
     Mode="" Description="运行 ss-local 容器的用户组" Type="Variable" 
     Display="advanced" Required="false" Mask="false">100</Config>
-  <Config Name="AppData 配置路径" Target="/ss-local/conf" Default="" 
+  <Config Name="sslocal配置目录" Target="/ss-local/conf" Default="" 
     Mode="rw" Description="该目录将映射到容器中的 /ss-local/conf，用于持久化存储 ss-local 配置" Type="Path" 
     Display="always" Required="false" Mask="false">/mnt/user/appdata/ss-local</Config>
+  <Config Name="privoxy配置路径" Target="/privoxy/conf" Default="" 
+    Mode="rw" Description="该目录将映射到容器中的 /prioxy/conf，用于持久化存储 privoxy 配置" Type="Path" 
+    Display="always" Required="false" Mask="false">/mnt/user/appdata/privoxy</Config>
   <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/ss-local-icon.png</Icon>
   <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
   <PostArgs></PostArgs>
