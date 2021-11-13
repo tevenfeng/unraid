@@ -18,10 +18,11 @@
   <Repository>haishanh/yacd:latest</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Network>host</Network>
+  <Network>bridge</Network>
+  <WebUI>http://[IP]:[PORT:7891]/</WebUI>
   <Shell>sh</Shell>
-  <Config Name="监听端口" Target="80" Default=""
-    Mode="tcp" Description="混合监听端口"  Type="Port" 
+  <Config Name="WebUI端口" Target="80" Default=""
+    Mode="tcp" Description="WebUI端口"  Type="Port" 
     Display="always" Required="true" Mask="false">7891</Config>
   <Config Name="用户 ID" Target="PUID" Default="" 
     Mode="" Description="运行 yacd 容器的用户" Type="Variable" 

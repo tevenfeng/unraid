@@ -18,11 +18,14 @@
   <Repository>dreamacro/clash:latest</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Network>host</Network>
+  <Network>bridge</Network>
   <Shell>sh</Shell>
   <Config Name="混合监听端口" Target="7890" Default=""
     Mode="tcp" Description="配置文件需配置混合监听端口"  Type="Port" 
     Display="always" Required="true" Mask="false">7890</Config>
+  <Config Name="restful端口" Target="9090" Default=""
+    Mode="tcp" Description="restful端口"  Type="Port" 
+    Display="always" Required="true" Mask="false">9090</Config>
   <Config Name="用户 ID" Target="PUID" Default="" 
     Mode="" Description="运行 clash 容器的用户" Type="Variable" 
     Display="advanced" Required="false" Mask="false">99</Config>
