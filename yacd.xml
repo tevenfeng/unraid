@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/tevenfeng/unraid/master/yacd.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Cloud: Network:Web Tools:</Category>
+  <Name>yacd</Name>
+  <Description>
+    [b][u][span style='color: #E80000;']应用介绍[/span][/u][/b][br]
+    Docker image for yacd[br][br]
+    [b][u][span style='color: #E80000;']文档介绍[/span][/u][/b][br]
+    https://www.github.com/haishanh/yacd[br][br]
+  </Description>
+  <Overview>
+    Docker image for yacd running with conf dir
+  </Overview>
+  <Registry>https://hub.docker.com/r/haishanh/yacd</Registry>
+  <GitHub>https://www.github.com/haishanh/yacd</GitHub>
+  <Repository>haishanh/yacd:latest</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Config Name="监听端口" Target="80" Default=""
+    Mode="tcp" Description="混合监听端口"  Type="Port" 
+    Display="always" Required="true" Mask="false">7891</Config>
+  <Config Name="用户 ID" Target="PUID" Default="" 
+    Mode="" Description="运行 yacd 容器的用户" Type="Variable" 
+    Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="用户组 ID" Target="GUID" Default="" 
+    Mode="" Description="运行 yacd 容器的用户组" Type="Variable" 
+    Display="advanced" Required="false" Mask="false">100</Config>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/clash-icon.png</Icon>
+  <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DateInstalled></DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <DonateImg></DonateImg>
+</Container>

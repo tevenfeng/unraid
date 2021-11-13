@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/tevenfeng/unraid/master/clash.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Cloud: Network:Web Tools:</Category>
+  <Name>clash</Name>
+  <Description>
+    [b][u][span style='color: #E80000;']应用介绍[/span][/u][/b][br]
+    Docker image for clash running with conf dir[br][br]
+    [b][u][span style='color: #E80000;']文档介绍[/span][/u][/b][br]
+    https://www.github.com/Dreamacro/clash[br][br]
+  </Description>
+  <Overview>
+    Docker image for clash running with conf dir
+  </Overview>
+  <Registry>https://hub.docker.com/r/dreamacro/clash</Registry>
+  <GitHub>https://www.github.com/Dreamacro/clash</GitHub>
+  <Repository>dreamacro/clash:latest</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Config Name="混合监听端口" Target="7890" Default=""
+    Mode="tcp" Description="配置文件需配置混合监听端口"  Type="Port" 
+    Display="always" Required="true" Mask="false">7890</Config>
+  <Config Name="用户 ID" Target="PUID" Default="" 
+    Mode="" Description="运行 clash 容器的用户" Type="Variable" 
+    Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="用户组 ID" Target="GUID" Default="" 
+    Mode="" Description="运行 clash 容器的用户组" Type="Variable" 
+    Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="配置目录" Target="/root/.config/clash" Default="" 
+    Mode="rw" Description="该目录将映射到容器中的 /root/.config/clash，用于持久化存储 clash 配置" Type="Path" 
+    Display="always" Required="false" Mask="false">/mnt/user/appdata/clash</Config>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/clash-icon.png</Icon>
+  <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DateInstalled></DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <DonateImg></DonateImg>
+</Container>
