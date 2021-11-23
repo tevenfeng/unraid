@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/tevenfeng/unraid/master/simplehttpserver.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Cloud: Network:Web Tools:</Category>
+  <Name>simplehttpserver</Name>
+  <Description>
+    python -m SimpleHTTPServer 8000
+  </Description>
+  <Overview>
+    简易文件服务器。
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/fengdingwen/simplehttpserver/</Registry>
+  <GitHub>https://github.com/tevenfeng/simplehttpserver</GitHub>
+  <Repository>fengdingwen/simplehttpserver:latest</Repository>
+  <Project>https://github.com/tevenfeng/simplehttpserver</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Config Name="用户 ID" Target="PUID" Default="" 
+    Mode="" Description="运行容器的用户" Type="Variable" 
+    Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="用户组 ID" Target="GUID" Default="" 
+    Mode="" Description="运行容器的用户组" Type="Variable" 
+    Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="访问端口" Target="8000" Default="" 
+    Mode="" Description="WebUI 的访问端口" Type="Variable" 
+    Display="always" Required="false" Mask="false">30007</Config>
+  <Config Name="目标目录" Target="/data" Default="" 
+    Mode="ro" Description="该目录将映射到容器中的 /data" Type="Path" 
+    Display="always" Required="true" Mask="false">/mnt/user</Config>
+  <WebUI>http://[IP]:[PORT:30007]/</WebUI>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/simplehttpserver.png</Icon>
+  <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DateInstalled></DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <DonateImg></DonateImg>
+</Container>
