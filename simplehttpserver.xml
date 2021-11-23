@@ -24,9 +24,9 @@
   <Config Name="用户组 ID" Target="GUID" Default="" 
     Mode="" Description="运行容器的用户组" Type="Variable" 
     Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="访问端口" Target="8000" Default="" 
-    Mode="" Description="WebUI 的访问端口" Type="Variable" 
-    Display="always" Required="false" Mask="false">30007</Config>
+  <Config Name="访问端口" Target="8000" Default=""
+    Mode="tcp" Description="WebUI 的访问端口"  Type="Port" 
+    Display="always" Required="true" Mask="false">30007</Config>
   <Config Name="目标目录" Target="/data" Default="" 
     Mode="ro" Description="该目录将映射到容器中的 /data" Type="Path" 
     Display="always" Required="true" Mask="false">/mnt/user</Config>
