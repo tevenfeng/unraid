@@ -11,6 +11,8 @@ UnRaid docker 模板库，目前支持的容器：
 |ss-local| Shadowsocks 客户端| Shadowsocks-libev 客户端 |
 |baidunetdisk| 百度网盘官方Linux客户端| 支持web网页或VNC访问 |
 |qinglong| 青龙面板| 懂的都懂 |
+|clash|clash-premium|扶墙|
+|simplehttpserver|建议文件服务器|测试用|
 
 
 #### 添加模板库
