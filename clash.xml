@@ -37,6 +37,7 @@
     Display="always" Required="false" Mask="false">/mnt/user/appdata/clash</Config>
   <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/clash-icon.png</Icon>
   <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
+  <WebUI>http://[IP]:[PORT:9090]/ui</WebUI>
   <PostArgs></PostArgs>
   <CPUset></CPUset>
   <DateInstalled></DateInstalled>
