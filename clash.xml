@@ -28,7 +28,10 @@
     Display="advanced" Required="false" Mask="false">100</Config>
   <Config Name="配置目录" Target="/clash" Default="" 
     Mode="rw" Description="该目录将映射到容器中的 /clash，用于持久化存储 clash 配置" Type="Path" 
-    Display="always" Required="false" Mask="false">/mnt/user/appdata/clash-tproxy</Config>
+    Display="always" Required="true" Mask="false">/mnt/user/appdata/clash-tproxy</Config>
+  <Config Name="ENHANCED_MODE" Target="ENHANCED_MODE" Default="" Mode=""
+    Description="Container Variable: ENHANCED_MODE" Type="Variable"
+    Display="always" Required="true" Mask="false">enable</Config>
   <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/clash-icon.png</Icon>
   <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
   <WebUI>http://[IP]:[PORT:9090]/ui</WebUI>
