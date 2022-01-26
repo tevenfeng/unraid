@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>clash-tproxy</Name>
+  <Repository>xtoys/clash</Repository>
+  <Registry>https://hub.docker.com/r/xtoys/clash</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.31.5</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:9090]/ui</WebUI>
+  <TemplateURL/>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/clash-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1642995702</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/clash-tproxy/</HostDir>
+      <ContainerDir>/clash</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>enable</Value>
+      <Name>ENHANCED_MODE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="config file path" Target="/clash" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/clash-tproxy/</Config>
+  <Config Name="ENHANCED_MODE" Target="ENHANCED_MODE" Default="enable" Mode="" Description="&#x9ED8;&#x8BA4;&#x5F00;&#x542F;&#x589E;&#x5F3A;&#x6A21;&#x5F0F;" Type="Variable" Display="always" Required="false" Mask="false">enable</Config>
+</Container>
