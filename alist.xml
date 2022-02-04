@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>alist</Name>
+  <Repository>xhofe/alist:latest</Repository>
+  <Registry>https://hub.docker.com/r/xhofe/alist</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>Another file list program that supports multiple storage, powered by Gin and React.&#xD;
+&#xD;
+https://github.com/Xhofe/alist</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:5244]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/alist-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1643947206</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Another file list program that supports multiple storage, powered by Gin and React.&#xD;
+&#xD;
+https://github.com/Xhofe/alist</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5244</HostPort>
+        <ContainerPort>5244</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/alist</HostDir>
+      <ContainerDir>/opt/alist/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Alist_Data/</HostDir>
+      <ContainerDir>/Data/WebDav</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="data_path" Target="/opt/alist/data" Default="" Mode="rw" Description="${path}:/opt/alist/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/alist</Config>
+  <Config Name="WebUI port" Target="5244" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: " Type="Port" Display="always" Required="false" Mask="false">5244</Config>
+  <Config Name="WebDav_Path" Target="/Data/WebDav" Default="" Mode="rw" Description="WebDav Data Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Alist_Data/</Config>
+</Container>

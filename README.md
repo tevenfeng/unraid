@@ -12,7 +12,9 @@ UnRaid docker 模板库，目前支持的容器：
 |baidunetdisk| 百度网盘官方Linux客户端| 支持web网页或VNC访问 |
 |qinglong| 青龙面板| 懂的都懂 |
 |clash-tproxy|clash-premium|基于Clash实现透明网关|
-|simplehttpserver|建议文件服务器|测试用|
+|yacd|Yet another clash dashboard|clash dashboard|
+|simplehttpserver|简易文件服务器|测试用|
+|Alist|文件服务|支持多种网盘协议的Web文件服务软件|
 
 
 #### 添加模板库
