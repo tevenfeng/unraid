@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/tevenfeng/unraid/master/dst-together.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Cloud: Network:Web Tools:</Category>
+  <Name>ddnsgo</Name>
+  <Description>
+    饥荒独立服务器Docker
+  </Description>
+  <Overview>
+    使用Docker创建你的专属DST服务器。
+  </Overview>
+  <Registry>https://hub.docker.com/r/jamesits/dst-server</Registry>
+  <GitHub>https://github.com/Jamesits/docker-dst-server</GitHub>
+  <Repository>jamesits/dst-server:latest</Repository>
+  <Project>https://github.com/Jamesits/docker-dst-server</Project>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Config Name="Server Files" Target="/data" Default="" 
+    Mode="rw" Description="服务器配置文件目录" Type="Path" 
+    Display="always" Required="false" Mask="false">/mnt/user/appdata/dst-server</Config>
+  <Config Name="服务器udp接口" Target="10999" Default="" 
+    Mode="tcp" Description="服务器udp接口"  Type="Port" 
+    Display="always" Required="true" Mask="false">10999</Config>
+  <Config Name="服务器udp接口" Target="11000" Default="" 
+    Mode="tcp" Description="服务器udp接口"  Type="Port" 
+    Display="always" Required="true" Mask="false">11000</Config>
+  <Config Name="服务器udp接口" Target="12346" Default="" 
+    Mode="tcp" Description="服务器udp接口"  Type="Port" 
+    Display="always" Required="true" Mask="false">12346</Config>
+  <Config Name="服务器udp接口" Target="12347" Default="" 
+    Mode="tcp" Description="服务器udp接口"  Type="Port" 
+    Display="always" Required="true" Mask="false">12347</Config>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/dst-server.png</Icon>
+  <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DateInstalled></DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <DonateImg></DonateImg>
+</Container>
