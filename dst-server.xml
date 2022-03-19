@@ -3,7 +3,7 @@
   <TemplateURL>https://raw.githubusercontent.com/tevenfeng/unraid/master/dst-together.xml</TemplateURL>
   <Beta>False</Beta>
   <Category>Cloud: Network:Web Tools:</Category>
-  <Name>ddnsgo</Name>
+  <Name>dst-server</Name>
   <Description>
     饥荒独立服务器Docker
   </Description>
