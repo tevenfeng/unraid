@@ -12,7 +12,7 @@
   </Overview>
   <Registry>https://hub.docker.com/r/jamesits/dst-server</Registry>
   <GitHub>https://github.com/Jamesits/docker-dst-server</GitHub>
-  <Repository>jamesits/dst-server:latest</Repository>
+  <Repository>jamesits/dst-server:latest-slim</Repository>
   <Project>https://github.com/Jamesits/docker-dst-server</Project>
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
