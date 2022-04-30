@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/tevenfeng/unraid/master/certbot.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Cloud: Network:Web Tools:</Category>
+  <Name>certbot</Name>
+  <Description>
+    certbot 免费泛域名证书的生成，容器启动自动生成，容器自动证书自动续期（按官方证书即将到期的30天）。目前支持阿里云 DNS、腾讯云 DNS、华为云 NDS、GoDaddy。
+    https://www.github.com/xzxiaoshan/certbot[br][br]
+  </Description>
+  <Overview>
+    certbot 免费泛域名证书的生成，容器启动自动生成，容器自动证书自动续期（按官方证书即将到期的30天）。目前支持阿里云 DNS、腾讯云 DNS、华为云 NDS、GoDaddy。
+  </Overview>
+  <Registry>https://hub.docker.com/r/xzxiaoshan/certbot</Registry>
+  <GitHub>https://www.github.com/xzxiaoshan/certbot</GitHub>
+  <Repository>xzxiaoshan/certbot:latest</Repository>
+  <Project>https://www.github.com/xzxiaoshan/certbot</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Config Name="用户 ID" Target="PUID" Default="" 
+    Mode="" Description="运行 certbot 容器的用户" Type="Variable" 
+    Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="用户组 ID" Target="GUID" Default="" 
+    Mode="" Description="运行 certbot 容器的用户组" Type="Variable" 
+    Display="advanced" Required="false" Mask="false">100</Config>
+  <Environment>
+    <Variable>
+      <Value>txy</Value>
+      <Name>PDNS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ALY_TOKEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ALY_KEY</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="AppData 配置路径" Target="/var/log/letsencrypt" Default="" 
+    Mode="rw" Description="该目录将映射到容器中的 /var/log/letsencrypt，用于持久化存储 certbot 配置" Type="Path" 
+    Display="always" Required="false" Mask="false">/mnt/user/appdata/certbot/logs</Config>
+  <Config Name="AppData 配置路径" Target="/var/log/letsencrypt" Default="" 
+    Mode="rw" Description="该目录将映射到容器中的 /etc/letsencrypt，用于持久化存储 certbot 配置" Type="Path" 
+    Display="always" Required="false" Mask="false">/mnt/user/appdata/certbot/letsencrypt</Config>
+  <Icon>https://gitee.com/fengdingwen/unraid/raw/master/images/certbot-icon.png</Icon>
+  <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DateInstalled></DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <DonateImg></DonateImg>
+</Container>
