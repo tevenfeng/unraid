@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <Container>
-  <TemplateURL>https://raw.githubusercontent.com/tevenfeng/unraid/master/acme.sh.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/tevenfeng/unraid/master/acmesh.xml</TemplateURL>
   <Beta>False</Beta>
   <Category>Cloud: Network:Web Tools:</Category>
-  <Name>acme.sh</Name>
+  <Name>acmesh</Name>
   <Description>
     acme.sh 免费泛域名证书的生成，容器启动自动生成，容器自动证书自动续期（按官方证书即将到期的60天）。
     https://www.github.com/neilpang/acme.sh[br][br]
