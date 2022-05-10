@@ -15,7 +15,8 @@ UnRaid docker 模板库，目前支持的容器：
 |yacd|Yet another clash dashboard|clash dashboard|
 |simplehttpserver|简易文件服务器|测试用|
 |Alist|文件服务|支持多种网盘协议的Web文件服务软件|
-
+|dst-server|游戏|饥荒联机版服务器|
+|acmesh|https证书|免费https证书并自动更新|
 
 #### 添加模板库
 
